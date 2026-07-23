@@ -1,6 +1,5 @@
 target/
 .idea/
 *.iml
-.mvn/
 application.properties
 application-dev.properties
