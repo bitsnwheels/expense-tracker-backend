@@ -2,10 +2,7 @@ package com.Adarsh.ExpenseTracker.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
 
@@ -29,7 +26,7 @@ public class User {
     private String email;
 
     @NotNull
-    @Positive
+    @PositiveOrZero
     private BigDecimal monthlyBudgetLimit = BigDecimal.ZERO;
 
     public Long getId() {
