@@ -20,8 +20,8 @@ public class UserController {
     }
 
     @PutMapping("/budget")
-    public void updateBudget(@RequestBody BudgetRequest request){
-       userService.updateBudgetService(request.getNewMonthlyBudget());
+    public User updateBudget(@RequestBody BudgetRequest request){
+       return userService.updateBudgetService(request.getNewMonthlyBudget());
     }
 
 }
